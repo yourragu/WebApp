@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('WebApp') {
       steps {
-        echo 'Stop Application'
+        bat 'StartApp.bat'
         bat 'StopApp.bat'
       }
     }
