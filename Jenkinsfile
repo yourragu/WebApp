@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('WebApp') {
       steps {
+        bat 'StopApp.bat'
         bat 'mvn install'
         bat 'set JENKINS_NODE_COOKIE=dontKillMe && start /min StartApp.bat'
-        bat 'StopApp.bat'
       }
     }
 
